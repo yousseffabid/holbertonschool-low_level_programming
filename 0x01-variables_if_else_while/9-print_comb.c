@@ -18,9 +18,10 @@ int main(void)
 	{
 		putchar(i);
 		if (i != '9')
+		{
 			putchar(',');
-		else
-			putchar('$');
+			putchar(' ');
+		}
 	}
 
 	putchar('\n');
