@@ -21,9 +21,9 @@ int main(void)
 	{
 		for (j = '0'; j <= '8'; j++)
 		{
-			for (n = i; n <= '9'; n++)
+			for (n = '0'; n <= '9'; n++)
 			{
-				for (m = j + 1; m <= '9'; m++)
+				for (m = '0'; m <= '9'; m++)
 				{
 					if ((i != n || j != m) && (i != m || j != n) && (j <= m))
 					{
