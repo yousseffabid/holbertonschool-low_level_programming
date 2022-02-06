@@ -25,6 +25,8 @@ int main(void)
 			{
 				for (m = j + 1; m <= '9'; m++)
 				{
+					if ((i != n || j != m) && (i != m || j != n) && (j <= m))
+					{
 					putchar(i);
 					putchar(j);
 					putchar(' ');
@@ -32,9 +34,10 @@ int main(void)
 					putchar(m);
 					if (m != '9' || n != '9' || i != '9' || j != '8')
 					{
-						putchar(',');
+					putchar(',');
 					}
 					putchar(' ');
+					}
 				}
 
 			}
