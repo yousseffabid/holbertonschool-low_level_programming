@@ -25,7 +25,7 @@ int main(void)
 			{
 				for (m = '0'; m <= '9'; m++)
 				{
-					if ((i != n || j != m) && (i != m || j != n) && (j <= m))
+					if ((i != n || j != m) && ((int)i * 10 + (int)j < ((int)n * 10 + (int)m)))
 					{
 					putchar(i);
 					putchar(j);
