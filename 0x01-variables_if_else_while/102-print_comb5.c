@@ -35,8 +35,8 @@ int main(void)
 					if (m != '9' || n != '9' || i != '9' || j != '8')
 					{
 					putchar(',');
+					putchar('\n');
 					}
-					putchar(' ');
 					}
 				}
 
