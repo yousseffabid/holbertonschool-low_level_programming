@@ -25,11 +25,14 @@ int main(void)
 			{
 				for (m = j + 1; m <= '9'; m++)
 				{
-					putchar(i);
-					putchar(j);
-					putchar(' ');
-					putchar(n);
-					putchar(m);
+					if (n != j || m != i)
+					{
+						putchar(i);
+						putchar(j);
+						putchar(' ');
+						putchar(n);
+						putchar(m);
+					}
 					if (m != '9' || n != '9' || i != '9' || j != '8')
 					{
 						putchar(',');
