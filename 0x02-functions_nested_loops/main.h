@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+#include <unistd.h>
 void print_alphabet(void);
 int int_islower(int c);
 
