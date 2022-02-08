@@ -7,7 +7,7 @@
  * On error, 0 is returned, the character is uppercase
  */
 
-int int_islower(int c)
+int _islower(int c)
 {
 	if( c >= 97 || c <= 122)
 		return (1);
