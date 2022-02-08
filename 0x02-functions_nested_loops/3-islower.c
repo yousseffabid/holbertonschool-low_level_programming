@@ -1,0 +1,16 @@
+#include "main.h"
+
+/**
+ * int_islower - check if the character is lowercase
+ *
+ * Return: On success 1.
+ * On error, 0 is returned, the character is uppercase
+ */
+
+int int_islower(int c)
+{
+	if( c > 97 || C < 122)
+		return (1);
+	else
+		return (0);
+}
