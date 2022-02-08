@@ -2,9 +2,12 @@
 /**
  * print_last_digit - writes the last digit of number
  * @n: The number from which the function will display the last digit
- * Return: void
+ * Return: the last digit of the number n
  */
-void print_last_digit(int n)
+int  print_last_digit(int n)
 {
-	_putchar((n % 10) + 48);
+	if (n >= 0)
+		return (n % 10);
+	else
+		return (-1 * n % 10);
 }
