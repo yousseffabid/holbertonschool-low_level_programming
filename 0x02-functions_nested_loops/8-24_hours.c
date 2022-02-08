@@ -27,7 +27,7 @@ void jack_baueir(void)
 			l = '0';
 			if (k > '5')
 			{
-				k = '0'
+				k = '0';
 				j++;
 				if (j > '9')
 				{
