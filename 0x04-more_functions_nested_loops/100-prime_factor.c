@@ -1,4 +1,5 @@
-#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * main - check the code
  *
@@ -10,7 +11,7 @@ int main(void)
 	long k = 612852475143;
 	long max = 0;
 
-	for (i = 0; i <= k; i += 2)
+	for (i = 2; i <= k; i += 2)
 	{
 		while (k % i == 0)
 		{
@@ -18,7 +19,7 @@ int main(void)
 			{
 				max = i;
 			}
-			k = i / i;
+			k = k / i;
 		}
 		if (i == 2)
 		{
