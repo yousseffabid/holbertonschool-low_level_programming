@@ -9,7 +9,7 @@ void print_number(int n)
 	int i = 10;
 	int j = 0;
 
-	if (n <= 9 && n > 0)
+	if (n <= 9 && n >= 0)
 	{
 		_putchar(n + 48);
 	}
@@ -19,7 +19,7 @@ void print_number(int n)
 		{
 			_putchar('-');
 		}
-		while (n / i != 0)
+		while ((n / i) != 0)
 		{
 			i *= 10;
 		}
