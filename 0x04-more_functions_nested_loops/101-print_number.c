@@ -12,7 +12,6 @@ void print_number(int n)
 	if (n <= 9 && n > 0)
 	{
 		_putchar(n + 48);
-		_putchar('\n');
 	}
 	else
 	{
@@ -30,6 +29,5 @@ void print_number(int n)
 			j = (abs(n) / i) % 10;
 			_putchar(j + 48);
 		}
-		_putchar('\n');
 	}
 }
