@@ -6,8 +6,11 @@
  */
 void print_number(int n)
 {
-	int i = 10;
-	int j = 0;
+	int i;
+	int j;
+
+	i = 10;
+	j = 0;
 
 	if (n <= 9 && n >= 0)
 	{
