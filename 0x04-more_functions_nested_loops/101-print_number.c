@@ -13,7 +13,7 @@ void print_number(int n)
 		if (n < 0)
 		{
 			m = -(unsigned int)n;
-			putchar('-');
+			_putchar('-');
 
 		}
 		else
@@ -27,7 +27,7 @@ void print_number(int n)
 		while (k >= 1)
 		{
 			i = m / k;
-			putchar(i % 10 + '0');
+			_putchar(i % 10 + '0');
 			k = k / 10;
 		}
 }
