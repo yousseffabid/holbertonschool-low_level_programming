@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_number - prints an integer using putchar (recursive function)
+ * print_number - prints an integer using putchar
  * @n: the number to be printed
  * Return: void
  */
@@ -20,7 +20,8 @@ void print_number(int n)
 		{
 			m = (unsigned int)n;
 		}
-		while (m / k >= 9)
+
+		while (m / k > 9)
 		{
 			k *= 10;
 		}
