@@ -22,12 +22,12 @@ void password_generator(void)
 	char letter[] = "abcdefghijklmnoqprstuvwyzx";
 	char LETTER[] = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
 	char symbols[] = "]'(!@)[#\"$\\/^&*?-_";
-	char password[1];
+	char password[17];
 	
 	srand(time(NULL));
 	random = rand() % 4;
 	
-	for (i = 0; i < 10; i++)
+	for (i = 0; i < 16; i++)
 	{
 		if (random == 1 )
 		{
@@ -54,7 +54,7 @@ void password_generator(void)
 		}
 	}
 	
-	for (j = 0; j < 10; j++)
+	for (j = 0; j < 16; j++)
 	{
 		printf("%c",password[j]);
 	}
