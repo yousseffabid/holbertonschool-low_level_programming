@@ -6,39 +6,39 @@
  */
 int _atoi(char *s)
 {
-	int i;
-	int digits;
-	int number;
-	int sign;
-	int j;
+	int i, positive, negative, j;
+	unsigned int number, digits;
 
 	digits = 1;
 	number = 0;
-	sign = 0;
+	positive = negative = 0;
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] == '-')
 		{
-			sign--;
+			negative++;
 		}
 		else if (s[i] == '+')
 		{
-			sign++;
+			positive++;
 		}
-		if ((s[i] >= 48 && s[i] <= 57))
+		if (s[i] >= 48 && s[i] <= 57)
 		{
-				j = i;
+			j = i;
 			while (s[++i] >= 48 && s[i] <= 57)
 			{
-				digits = digits * 10;
+			digits = digits * 10;
 			}
 			while (digits >= 1)
 			{
-				number = (s[j++] - 48) * digits + number;
-				digits /= 10;
+			number = (s[j++] - 48) * digits + number;
+			digits /= 10;
 			}
 			break;
 		}
 	}
-	return (number * (sign / abs(sign)));
+	if (negative % 2 != 0 && positive != negative)
+		return ((signed int)number * -1);
+	else
+		return ((signed int)number);
 }
