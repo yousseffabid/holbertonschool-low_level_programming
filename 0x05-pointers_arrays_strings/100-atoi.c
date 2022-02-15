@@ -38,7 +38,7 @@ int _atoi(char *s)
 		}
 	}
 	if (negative % 2 != 0 && positive != negative)
-		return ((signed int)number * -1);
+		return (((signed int)number) * -1);
 	else
 		return ((signed int)number);
 }
