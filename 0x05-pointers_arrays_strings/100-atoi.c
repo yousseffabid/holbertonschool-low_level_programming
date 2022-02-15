@@ -1,57 +1,44 @@
 #include "main.h"
-
 /**
  * _atoi - converts a string into an integer
  * @s: The string that contains the integer to display
  * Return: integer
  */
-
 int _atoi(char *s)
 {
 	int i;
-	int positive;
-	int negative;
 	int digits;
 	int number;
 	int sign;
+	int j;
 
 	digits = 1;
-	positive = 0;
-	negative = 0;
 	number = 0;
-	sign = 1;
-
+	sign = 0;
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if(s[i] == '-')
+		if (s[i] == '-')
 		{
-		 	negative++;
+			sign--;
 		}
 		else if (s[i] == '+')
 		{
-			positive++;
+			sign++;
 		}
-
-		if (s[i] >= 48 && s[i] <= 57)
+		if ((s[i] >= 48 && s[i] <= 57))
 		{
-			digits *= 10;	
-		}
-	}
-
-	for (i = 0; s[i] != '\0'; i++)
-	{
-		if (s[i] >= 48 && s[i] <= 57)
-	 	{
-	 		if (positive - negative < 0)
+				j = i;
+			while (s[++i] >= 48 && s[i] <= 57)
 			{
-				sign = -1;
-				positive = 0;
-				negative = 0;
+				digits = digits * 10;
 			}
-
-			digits/=10;
-			number = (s[i]-48)*digits + number; 
+			while (digits >= 1)
+			{
+				number = (s[j++] - 48) * digits + number;
+				digits /= 10;
+			}
+			break;
 		}
 	}
-	return (number * sign);
+	return (number * (sign / abs(sign)));
 }
