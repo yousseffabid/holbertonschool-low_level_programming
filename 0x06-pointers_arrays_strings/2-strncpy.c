@@ -1,4 +1,3 @@
-
 #include "main.h"
 /**
  * _strncpy - copy a specific number of characters to the destination string
