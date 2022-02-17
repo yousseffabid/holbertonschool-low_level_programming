@@ -7,11 +7,10 @@
 char *cap_string(char *s)
 {
 	int i, j, found;
-
-	found = 0;
 	char seperators[] = {',', ';', '.', '!', '"', '(',
 	')', '{', '}', '?', '\n', '\t', ' '};
 
+	found = 0;
 	if (s[0] >= 97 && s[0] <= 122)
 	{
 		s[0] = s[0] - 32;
