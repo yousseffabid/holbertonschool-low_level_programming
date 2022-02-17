@@ -14,7 +14,7 @@ char *leet(char *s)
 		for (j = 0; j < 8; j++)
 		{
 			if (((s[i] == characters[j]) || (s[i]  == (characters[j] + 32))) &&
-					(s[i] >= 65 && (s[i] <= 90) || (s[i] >= 97 && s[i] <= 122)))
+					((s[i] >= 65 && s[i] <= 90) || (s[i] >= 97 && s[i] <= 122)))
 			{
 				s[i] = 48 + j;
 				break;
