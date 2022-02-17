@@ -4,7 +4,7 @@
  * @s: string to be encoded
  * Return: encccoded string
  */
-char *leet(char *s);
+char *leet(char *s)
 {
 	int i, j;
 	char characters[] = {'O', 'L', '\0', 'E', 'A', '\0', '\0', 'T'};
