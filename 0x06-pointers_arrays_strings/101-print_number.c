@@ -2,7 +2,7 @@
 /**
  * print_number -  prints a number using putchar
  * @n: number to be printed
- * Return: integer to be printed
+ * Return: void
  */
 void print_number(int n)
 {
