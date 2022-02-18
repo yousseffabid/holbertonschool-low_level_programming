@@ -18,6 +18,7 @@ char *rot13(char *s)
 			if (s[i] == alphabets[j])
 			{
 				s[i] = encoded_alphabets[j];
+				break;
 			}
 		}
 	}
