@@ -11,9 +11,9 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int i, j, plus;
 
-	for (i = 0; s1[i] != '\0'; i++)
+	for (i = 0; n1[i] != '\0'; i++)
 	;
-	for (j = 0; s2[j] != '\0'; j++)
+	for (j = 0; n2[j] != '\0'; j++)
 	;
 	if ((size_r  < i) || (size_r < j))
 		return ('\0');
@@ -26,15 +26,15 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	{
 		if (i < 0 && j >= 0)
 		{
-			r[size_r] = (s2[j] - 48 + plus) % 10 + 48;
+			r[size_r] = (n2[j] - 48 + plus) % 10 + 48;
 		}
 		else if (i >= 0 && j < 0)
 		{
-			r[size_r] = (s1[i] - 48 + plus) % 10 + 48;
+			r[size_r] = (n1[i] - 48 + plus) % 10 + 48;
 		}
 		else
 		{
-			r[size_r] = (s1[i] - 48 + s2[j] - 48 + plus) % 10 + 48;
+			r[size_r] = (n1[i] - 48 + n2[j] - 48 + plus) % 10 + 48;
 		}
 		if (((n1[i] + n2[j] - 48 + plus) > '9' && (i >= 0 && j >= 0)) ||
 				(n1[i] + plus > '9' && i >= 0) || (n2[j] + plus > '9' && j >= 0))
