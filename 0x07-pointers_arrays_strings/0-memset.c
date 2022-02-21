@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _memset -  fills the first n bytes of the memory area with the constant byte b
+ * _memset -  fills the first n bytes with the constant byte b
  * @s: pointer to string
  * @b: character to be copied to the string
  * @n: number of bytes
