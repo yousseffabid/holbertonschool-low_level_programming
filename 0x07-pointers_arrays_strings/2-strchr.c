@@ -6,10 +6,10 @@
  * Return: pointer to string.
  */
 char *_strchr(char *s, char c)
-{
+{	
 	while (*s++)
 	{
-		if (*S == c)
+		if (*s == c)
 			return (s);
 	}
 	return (0);
