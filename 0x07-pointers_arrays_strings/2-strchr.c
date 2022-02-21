@@ -25,7 +25,10 @@ char *_strchr(char *s, char c)
 		}
 	}
 	if (j == 0)
-		return (NULL);
+	{
+		result = NULL;
+		return (result);
+	}
 	result[j] = '\0';
 	return (result);
 }
