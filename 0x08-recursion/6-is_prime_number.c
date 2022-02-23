@@ -26,7 +26,5 @@ int prime(int n, int c)
  */
 int is_prime_number(int n)
 {
-	if (n < 0)
-		n = n * -1;
 	return (prime(n, 2));
 }
