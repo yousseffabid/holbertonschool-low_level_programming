@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 /**
  * prime - function checks if integer is prime
  * @n: number to evaluate
