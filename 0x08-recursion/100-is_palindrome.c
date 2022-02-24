@@ -20,7 +20,6 @@ int check(char *s, char *c)
 /**
  * is_palindrome - checks if a string is a palindrome
  * @s: string to evaluate, address of 1st element
- * @c: string to evaluate, address of last element
  * Return: 1 if the stringr is palindrome and 0 if it is not
  */
 int is_palindrome(char *s)
