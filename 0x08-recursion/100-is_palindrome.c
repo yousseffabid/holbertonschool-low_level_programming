@@ -25,9 +25,5 @@ int check(char *s, char *c)
  */
 int is_palindrome(char *s)
 {
-	int i;
-
-	for (i = 0; s[i] != '\0'; i++)
-	;
-	return (check(s, s + i - 1));
+	return (check(s, (s + strlen(s) - 1)));
 }
