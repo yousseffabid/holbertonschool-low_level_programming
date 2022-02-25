@@ -12,8 +12,7 @@ int main(int argc, char *argv[])
 
 	number_of_coins = 0;
 	i = 0;
-	remainder = atoi(argv[1]);
-	if (argc > 2)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
@@ -22,6 +21,7 @@ int main(int argc, char *argv[])
 		printf("0\n");
 	else
 	{
+		remainder = atoi(argv[1]);
 		while (remainder != 0)
 		{
 			if (remainder >= change[i])
@@ -29,8 +29,7 @@ int main(int argc, char *argv[])
 				number_of_coins += (remainder / change[i]);
 				remainder = remainder % change[i];
 			}
-			else
-			       i++;
+			i++;
 		}
 		printf("%d\n", number_of_coins);
 	}
