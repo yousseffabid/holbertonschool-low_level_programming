@@ -12,11 +12,11 @@ int main(int argc, char *argv[])
 	result = 0;
 	if (argc == 1)
 		printf("0\n");
-
-	for (i = 0; i < argc; i++)
+	else
 	{
-		if ((*argv[i] >= 65 && *argv[i] <= 90) ||
-				(*argv[i] >= 97 && *argv[i] <= 122))
+	for (i = 1; i < argc; i++)
+	{
+		if (!isdigit(*argv[i]))
 		{
 			printf("Error\n");
 			return (1);
@@ -25,5 +25,6 @@ int main(int argc, char *argv[])
 			result += atoi(argv[i]);
 	}
 	printf("%d\n", result);
+	}
 	return (0);
 }
