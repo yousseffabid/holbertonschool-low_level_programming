@@ -1,13 +1,12 @@
 #include "main.h"
 /**
- * create_array - creates an array of chars
- * @size: size of the array
- * @c: character to fill the array with
- * Return: char
+ * _strdup - creates a copy of a string
+ * @str: string
+ * Return: pointer to char
  */
 char *_strdup(char *str)
 {
-	int i,j;
+	int i, j;
 	char *str_copy;
 
 	if (str == 0)
