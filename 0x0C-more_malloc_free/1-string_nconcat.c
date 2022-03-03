@@ -3,12 +3,12 @@
  * string_nconcat - concatenates two strings
  * @s1: first string
  * @s2: second string
- * @n: number of characters to copy from s2 
+ * @n: number of characters to copy from s2
  * Return: pointer to the new allocated memory
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int i;
+	unsigned int i;
 	char *ptr;
 
 	if (s1 == NULL)
