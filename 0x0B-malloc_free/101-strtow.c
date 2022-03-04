@@ -40,6 +40,6 @@ char **strtow(char *str)
 		if ((str[i + 1] == ' ' || str[i + 1] == '\0') && str[i] != ' ')
 			ptr1[j++] = '\0';
 	}
-	ptr2[k - 1] = NULL;
+	ptr2[k] = NULL;
 	return (ptr2);
 }
