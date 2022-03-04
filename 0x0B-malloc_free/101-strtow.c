@@ -10,7 +10,7 @@ char **strtow(char *str)
 	char *ptr1;
 	char **ptr2;
 
-	if (str == NULL || *str  == '\0')
+	if (str == NULL && *str == '\0')
 		return (NULL);
 	characters = 0;
 	words = 0;
@@ -18,7 +18,8 @@ char **strtow(char *str)
 	{
 		if (str[i] != ' ' && str[i] != '\0')
 			characters++;
-		if (str[i + 1] != ' ' && str[i + 1] != '\0' && str[i] == ' ')
+		if ((str[i + 1] != ' ' && str[i + 1] != '\0' && str[i] == ' ')
+				|| (str[0] != ' '))
 			words++;
 	}
 	ptr1 = malloc(sizeof(char) * (characters + words));
@@ -31,14 +32,14 @@ char **strtow(char *str)
 	k = 0;
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] == ' ' && str[i + 1] != ' ')
+		if ((str[i] == ' ' && str[i + 1] != ' ') || (str[i] != ' ' && i == 0))
 			ptr2[k++] = ptr1 + j;
 		if (str[i] != ' ')
 			ptr1[j++] = str[i];
-		if (str[i + 1] == ' ' && str[i] != ' ')
+		if ((str[i + 1] == ' ' || str[i + 1] == '\0') && str[i] != ' ')
 			ptr1[j++] = '\0';
 	}
-	ptr1[j] = '\0';
 	ptr2[k] = NULL;
 	return (ptr2);
 }
+
