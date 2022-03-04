@@ -10,7 +10,7 @@ char **strtow(char *str)
 	char *ptr1;
 	char **ptr2;
 
-	if (str == NULL)
+	if (str == NULL || *str  == '\0')
 		return (NULL);
 	characters = 0;
 	words = 0;
@@ -39,5 +39,6 @@ char **strtow(char *str)
 			ptr1[j++] = '\0';
 	}
 	ptr1[j] = '\0';
+	ptr2[k] = NULL;
 	return (ptr2);
 }
