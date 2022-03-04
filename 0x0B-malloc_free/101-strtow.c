@@ -10,7 +10,7 @@ char **strtow(char *str)
 	char *ptr1;
 	char **ptr2;
 
-	if (str == NULL || *str == '\0' || *str == ' ')
+	if ((str == NULL || *str == '\0') || (*str == ' ' && strlen(str) == 1))
 		return (NULL);
 	characters = 0;
 	words = 0;
