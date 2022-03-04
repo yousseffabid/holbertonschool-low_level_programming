@@ -11,7 +11,7 @@ char **strtow(char *str)
 	char **ptr2;
 
 	if ((str == NULL || *str == '\0') ||
-			(*str == ' ' && str[1] == '\0')
+			(*str == ' ' && str[1] == '\0'))
 		return (NULL);
 	characters = 0;
 	words = 0;
@@ -43,4 +43,3 @@ char **strtow(char *str)
 	ptr2[k - 1] = NULL;
 	return (ptr2);
 }
-
