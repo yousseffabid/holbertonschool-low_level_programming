@@ -7,11 +7,9 @@
 char **strtow(char *str)
 {
 	int i, j, k, characters, words;
-	char *ptr1;
-	char **ptr2;
+	char *ptr1, **ptr2;
 
-	if ((str == NULL || *str == '\0') ||
-			(str[0] == ' ' && str[1] == '\0'))
+	if (str == NULL || *str == '\0')
 		return (NULL);
 	characters = 0;
 	words = 0;
@@ -23,6 +21,8 @@ char **strtow(char *str)
 				|| (str[i] != ' ' && i == 0))
 			words++;
 	}
+	if (characters == 0)
+		return (NULL);
 	ptr1 = malloc(sizeof(char) * (characters + words));
 	if (ptr1 == NULL)
 		return (NULL);
