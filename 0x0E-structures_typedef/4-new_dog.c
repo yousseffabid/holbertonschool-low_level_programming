@@ -52,12 +52,12 @@ int _strlen(char *s)
  */
 char *_strcpy(char *dest, char *src)
 {
-	char *saved = dest;
+	char *cpy = dest;
 
 	while (*src)
 	{
 		*dest++ = *src++;
 	}
-	*dest = 0;
-	return (saved);
+	*dest = '\0';
+	return (cpy);
 }
