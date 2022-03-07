@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "dog.h"
-char *_strcpy(char *dest, char *src);
 int _strlen(char *s);
+char *_strcpy(char *dest, char *src);
 /**
  * new_dog - creates a new dog.
  * @name: name of the dog
@@ -29,7 +29,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	ptr_dog->name = _strcpy(ptr_dog->name, name);
 	ptr_dog->owner = _strcpy(ptr_dog->owner, owner);
 	ptr_dog->age = age;
-	return (dog);
+	return (ptr_dog);
 }
 /**
  * _strlen - counts string length of s
