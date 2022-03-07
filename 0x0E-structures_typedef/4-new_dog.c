@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "dog.h"
 char *_strcpy(char *dest, char *src);
 int _strlen(char *s);
