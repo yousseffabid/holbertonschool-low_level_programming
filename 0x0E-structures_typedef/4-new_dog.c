@@ -31,3 +31,33 @@ dog_t *new_dog(char *name, float age, char *owner)
 	ptr_dog->age = age;
 	return (dog);
 }
+/**
+ * _strlen - counts string length of s
+ * @s: parameter
+ * Return: int
+ */
+int _strlen(char *s)
+{
+	int i = 0;
+
+	for (i = 0; s[i] != '\0'; i++)
+		;
+	return (i);
+}
+/**
+ * _strcpy - copies string
+ * @dest: destination
+ * @src: destination
+ * Return: (dest value)
+ */
+char *_strcpy(char *dest, char *src)
+{
+	char *saved = dest;
+
+	while (*src)
+	{
+		*dest++ = *src++;
+	}
+	*dest = 0;
+	return (saved);
+}
