@@ -8,7 +8,8 @@
  * @owner: owner of dog
  * Description: This struct has the data of my_dog
  */
-struct dog {
+struct dog
+{
 	char *name;
 	float age;
 	char *owner;
