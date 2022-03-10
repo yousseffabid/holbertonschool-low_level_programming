@@ -4,7 +4,7 @@
  * @separator: separator between numbers
  * @n: number of the rest parameters
  * @...: the rest of the parameters
- * Return:void
+ * Return: void
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
@@ -14,7 +14,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_start(ap, n);
 	for (i = 0; i < n; i++)
 	{
-		printf("%d",va_arg(ap, int));
+		printf("%d", va_arg(ap, int));
 		if (separator != NULL && i != n - 1)
 			printf("%s", separator);
 	}
