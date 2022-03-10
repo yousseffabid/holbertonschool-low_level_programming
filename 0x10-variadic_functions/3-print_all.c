@@ -7,13 +7,12 @@
  */
 void print_all(const char * const format, ...)
 {
-	unsigned int i, j, flag;
+	int i, flag;
 	char *s;
 	va_list pa;
 
 	i = 0;
-	j = 0;
-	flag = 0;
+	flag = -1;
 	va_start(pa, *format);
 	while (format[i] != '\0')
 	{
@@ -40,7 +39,7 @@ void print_all(const char * const format, ...)
 			default:
 				flag = i;
 		}
-		if (format[i + 1] != '\0' && flag != 1)
+		if (format[i + 1] != '\0' && flag != i)
 			printf(", ");
 		i++;
 	}
