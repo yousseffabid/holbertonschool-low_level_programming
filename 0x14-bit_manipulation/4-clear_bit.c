@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * set_bit - get the value of the nth bit
+ * clear_bit - aet the value of a bit to zero
  * @n: pointer to unsigned number
  * @index: index of the bit
  * Return: int
  */
-int set_bit(unsigned long int *n, unsigned int index)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int mask;
 
