@@ -6,7 +6,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long check, i, multi_of_two;
+	unsigned long int check, i, multi_of_two;
 
 	if (n == 0)
 	{
