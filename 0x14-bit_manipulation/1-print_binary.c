@@ -16,7 +16,7 @@ void print_binary(unsigned long int n)
 		return;
 	}
 	for (multi_of_two = 1; (multi_of_two * 2) <= n; multi_of_two *= 2)
-	;
+		;
 	check = 0;
 	for (i = 0; ; i++)
 	{
