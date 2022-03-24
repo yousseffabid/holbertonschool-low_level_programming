@@ -8,6 +8,8 @@ void print_binary(unsigned long int n)
 {
 	unsigned long int check, i, multi_of_two;
 
+	if (n < 0)
+		return;
 	if (n == 0)
 	{
 		_putchar('0');
