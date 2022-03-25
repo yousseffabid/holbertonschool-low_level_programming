@@ -13,10 +13,11 @@ listint_t *reverse(listint_t *ptr)
 		return (ptr);
 
 	tmp = reverse(ptr->next);
+
 	(ptr->next)->next = ptr;
+	ptr->next = NULL;
 
 	return (tmp);
-
 }
 /**
  * reverse_listint - reverse list
