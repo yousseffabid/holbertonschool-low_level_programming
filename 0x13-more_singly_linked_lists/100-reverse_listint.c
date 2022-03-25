@@ -27,6 +27,8 @@ listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *ptr;
 
+	if (head == NULL || *head == NULL)
+		return (NULL);
 	ptr = *head;
 	*head = reverse(ptr);
 
