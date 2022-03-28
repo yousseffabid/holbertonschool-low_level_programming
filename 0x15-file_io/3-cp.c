@@ -7,12 +7,12 @@
  * Return: void
  */
 
-void _cp(char *src, char *dst)
+void _cp(const char *src, const char *dst)
 {
 	char buffer[1024];
 	int r, fd_from, fd_to;
 
-		fd_from = open(src, O_RDONLY);
+	fd_from = open(src, O_RDONLY);
 	if (fd_from == -1 || src  == NULL)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src);
@@ -20,10 +20,9 @@ void _cp(char *src, char *dst)
 	}
 
 	fd_to = open(dst, O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	r = 1;
-	while (r)
+
+	while ((r = read(fd_from, buffer, 1024)) > 0)
 	{
-		r = read(fd_from, buffer, 1024);
 		if (write(fd_to, buffer, r) != r || fd_to == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dst);
@@ -33,7 +32,7 @@ void _cp(char *src, char *dst)
 
 	if (r  == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", dst);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src);
 		exit(98);
 	}
 
