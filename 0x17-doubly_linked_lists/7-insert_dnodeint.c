@@ -31,16 +31,15 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (NULL);
 	new_node->n = n;
 	new_node->next = head_ref;
-	new_node->prev = NULL;
-
-	if (head_ref && head_ref->next != NULL)
-		head_ref->next->prev = new_node;
-
-	if (head_ref &&  head_ref->prev != NULL)
-		head_ref->prev->next = new_node;
 
 	if (head_ref)
+	{
 		new_node->prev = head_ref->prev;
+		head_ref->prev->next = new_node;
+		head_ref->prev = new_node;
+	}
+	else
+		new_node->prev = NULL;
 
 	return (new_node);
 }
