@@ -23,20 +23,24 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		head_ref = head_ref->next;
 		counter++;
 	}
-	if (idx > counter)
+	if (idx >= counter)
 		return (NULL);
 
 	new_node = malloc(sizeof(dlistint_t));
 	if (new_node == NULL)
 		return (NULL);
 	new_node->n = n;
-
-	if (head_ref->next != NULL)
-		head_ref->next->prev = new_node;
-	if (head_ref->prev != NULL)
-		head_ref->prev->next = new_node;
 	new_node->next = head_ref;
-	new_node->prev = head_ref->prev;
+	new_node->prev = NULL;
+
+	if (head_ref && head_ref->next != NULL)
+		head_ref->next->prev = new_node;
+
+	if (head_ref &&  head_ref->prev != NULL)
+		head_ref->prev->next = new_node;
+
+	if (head_ref != *h)
+		new_node->prev = head_ref->prev;
 
 	return (new_node);
 }
