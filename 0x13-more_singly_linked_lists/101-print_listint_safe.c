@@ -30,5 +30,5 @@ size_t print_listint_safe(const listint_t *head)
 		count++;
 		head = head->next;
 	}
+	head = NULL;
 	return (count);
-}
